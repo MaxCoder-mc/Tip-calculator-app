@@ -44,6 +44,7 @@ function calculateTip() {
 
   toggleResetButton();
 }
+
 function clearButtonSelection() {
   document
     .querySelector(".tip-buttons .selected")
