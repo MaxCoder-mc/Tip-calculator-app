@@ -290,6 +290,7 @@ button.selected {
     flex-direction: row;
 
     box-shadow: 0 2rem 2.687rem rgba(38, 192, 171, 0.205);
+    margin-bottom: 2rem;
   }
   .left {
     padding: 1rem;
