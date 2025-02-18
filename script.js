@@ -60,6 +60,7 @@ function resetCalculator() {
   document.querySelector(".people .errorMsg").textContent = "";
   tipPercent = 0;
   clearButtonSelection();
+  toggleResetButton();
 }
 
 function toggleResetButton() {
