@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <img src="./images/logo.svg" alt="splitter" class="logo-img" />
+
+      <div class="container">
+        <!-- Left side of the calculator -->
+        <div class="left">
+          <div>
+            <label for="billAmount">Bill </label>
+            <div class="input-container">
+              <img
+                class="icon"
+                src="./images/icon-dollar.svg"
+                alt="dollar sign"
+              />
+              <input
+                type="number"
+                id="billAmount"
+                placeholder="0"
+                aria-label="Enter bill amount"
+              />
+            </div>
+          </div>
+
+          <!-- Tip Buttons -->
+          <div>
+            <label for="customTip">Select Tip %</label>
+            <div class="tip-buttons">
+              <button>5%</button>
+              <button>10%</button>
+              <button>15%</button>
+              <button>25%</button>
+              <button>50%</button>
+              <input
+                type="number"
+                id="customTip"
+                placeholder="Custom"
+                min="0"
+                aria-label="Enter number of people"
+              />
+            </div>
+          </div>
+
+          <div class="people">
+            <label for="numPeople">Number of People</label>
+            <span class="errorMsg" aria-live="polite">&nbsp;</span>
+            <div class="input-container">
+              <img class="icon" src="./images/icon-person.svg" alt="person" />
+              <input type="number" id="numPeople" placeholder="0" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side of the calculator -->
+        <div class="right">
+          <div class="result">
+            <div class="tip-amount">
+              <span class="amount">Tip Amount</span>
+              <span class="person">/ person</span>
+            </div>
+            <span id="tipAmount" role="status">$0.00</span>
+          </div>
+
+          <div class="result">
+            <div class="total-amount">
+              <span class="amount">Total</span>
+              <span class="person">/ person</span>
+            </div>
+            <span id="totalPerPerson" role="status">$0.00</span>
+          </div>
+
+          <button class="reset-button disabled" onclick="resetCalculator()">
+            RESET
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
